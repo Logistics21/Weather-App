@@ -75,10 +75,10 @@ const WeatherInfo = (forecast) => {
 }
 
 const WeatherItem = ({minTempC, minTempF, maxTempC, maxTempF, dateTimeISO, icon, temp }) => {
-  debugger
+
   let date = dateTimeISO.slice(0, dateTimeISO.indexOf("T"));
-  const high = temp === "F" ? maxTempF : maxTempF;
-  const low = temp === "F" ? maxTempC : minTempC;
+  const high = temp === "F" ? maxTempF : maxTempC;
+  const low = temp === "F" ? minTempF : minTempC;
   return (
     <div className="weather-item">
       <h3>{date}</h3>
